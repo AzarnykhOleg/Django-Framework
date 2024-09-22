@@ -871,3 +871,11 @@ LOGGING = {
 **Логирование** - это важный инструмент для отладки и анализа работы
 приложения, поэтому рекомендуется использовать его в своих проектах. 
 ***
+## Дополнительные материалы:
+1. [Документация фреймоворка Django (на английском языке)](https://docs.djangoproject.com/en/5.0/)
+2. [Документация фреймоворка Django (на русском языке)](https://django.fun/docs/django/5.0/)
+3. [Логирование проекта Django (на английском языке)](https://docs.djangoproject.com/en/5.0/topics/logging/)
+4. [Логирование проекта Django (на русском языке)](https://django.fun/docs/django/5.0/topics/logging//)
+5. [Что такое логирование (статья)](https://habr.com/ru/companies/wunderfund/articles/683880/)
+6. [Документация по шаблонам в django (документация на русском)](https://djangodoc.ru/3.2/topics/templates/)
+7. [Видео по работе с шаблонами](https://www.youtube.com/watch?v=BnarjXCfSMY)
