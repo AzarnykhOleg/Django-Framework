@@ -879,3 +879,8 @@ LOGGING = {
 5. [Что такое логирование (статья)](https://habr.com/ru/companies/wunderfund/articles/683880/)
 6. [Документация по шаблонам в django (документация на русском)](https://djangodoc.ru/3.2/topics/templates/)
 7. [Видео по работе с шаблонами](https://www.youtube.com/watch?v=BnarjXCfSMY)
+
+
+## [К оглавлению](README.md)
+
+## [К следующей главе 'Работа с моделями'](2_Working_with_models.md)
