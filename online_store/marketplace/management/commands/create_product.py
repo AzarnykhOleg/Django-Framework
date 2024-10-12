@@ -3,7 +3,7 @@ from marketplace.models import Product
 
 
 class Command(BaseCommand):
-    help = 'Добавление в БД нового продукта'
+    help = 'Добавляет в БД новый продукт'
 
     def add_arguments(self, parser):
         parser.add_argument('-T', '--title', type=str, help='Префикс названия товара')

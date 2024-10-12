@@ -1,3 +1,5 @@
+from decimal import Decimal
+
 from django.core.validators import RegexValidator
 from django.db import models
 
@@ -36,5 +38,15 @@ class Product(models.Model):
 class Order(models.Model):
     customer = models.ForeignKey(Client, on_delete=models.CASCADE)
     products = models.ManyToManyField(Product)
-    date_ordered = models.DateTimeField(auto_now_add=True)
+    date_ordered = models.DateField(auto_now_add=False)
     total_price = models.DecimalField(max_digits=8, decimal_places=2)
+
+    def __str__(self):
+        return f'Заказ: {self.customer.name}, описание: {self.products}, сумма заказа: {self.total_price}'
+
+    def calculate_total(self):
+        total = Decimal(0)
+        for product in self.products.all():
+            total += product.price
+        self.total_price = total
+        self.save()

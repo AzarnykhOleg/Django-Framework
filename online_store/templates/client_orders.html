@@ -1,0 +1,42 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block title_1 %}{{ title_1 }}{% endblock %}
+
+{% block title_2 %}{{ title_2 }}{% endblock %}
+
+{% block title_3 %}{{ title_3 }}{% endblock %}
+
+
+{% block content %}
+<h1>{{ title_1 }}&nbsp{{ title_2 }}&nbsp{{ title_3 }}&nbsp<span class="fashion_1", ;>{{ title_4 }}</span></h1>
+    <h2>за последние 7 дней (неделю):</h2>
+    {% if products_week %}
+        {% for product in products_week %}
+        	<h3><li>{{ product.title }}</li></h3>
+        {% endfor %}
+    {% else %}
+        <h3>заказов не было</h3>
+    {% endif %}
+
+    <h2>за последние 30 дней (месяц):</h2>
+        {% if products_month %}
+        {% for product in products_month %}
+        	<h3><li>{{ product.title }}</li></h3>
+        {% endfor %}
+    {% else %}
+        <h3>заказов не было</h3>
+    {% endif %}
+
+    <h2>за последние 365 дней (год):</h2>
+    {% if products_year %}
+        {% for product in products_year %}
+        	<h3><li>{{ product.title }}</li></h3>
+        {% endfor %}
+    {% else %}
+        <h3>заказов не было</h3>
+    {% endif %}
+
+{% endblock %}

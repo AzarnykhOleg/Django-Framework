@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'marketplace',
+    'django_google_fonts',
 ]
+
+GOOGLE_FONTS = ['Kablammo', 'Roboto', 'Rubik Doodle Shadow']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
