@@ -30,6 +30,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=8, decimal_places=2)
     quantity = models.IntegerField()
     date_of_addition = models.DateField(auto_now_add=True)
+    image = models.ImageField(upload_to='images/', default='1')
 
     def __str__(self):
         return f'Product: {self.title}, описание: {self.description}, цена: {self.price}, количество: {self.quantity}'
