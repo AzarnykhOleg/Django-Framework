@@ -25,7 +25,7 @@ class Command(BaseCommand):
             title=f'Product {i}',
             description=f'Description for Product {i}',
             price=Decimal(random.uniform(10, 100)),
-            quantity=random.randint(1, 10)
+            quantity=random.randint(1, 10),
         ) for i in range(1, 11)]
 
         # Создаем несколько заказов и связанных продуктов

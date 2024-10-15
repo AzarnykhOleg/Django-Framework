@@ -1,11 +1,13 @@
 from datetime import timedelta
 
+from django.core.files.storage import FileSystemStorage
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 import logging
 
 from django.utils import timezone
 
+from .forms import UploadImmage
 from .models import Client, Product, Order
 
 logger = logging.getLogger(__name__)
@@ -69,3 +71,16 @@ def client_orders(request, client_id: int = None):
         }
     return render(request, 'client_orders.html', context)
 
+
+def upload_immage(request):
+    if request.method == 'POST':
+        form = UploadImmage(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+    else:
+        form = UploadImmage()
+    return render(request, 'upload_image.html', {'form': form,
+                                                 'title': 'Загрузка данных о товаре',
+                                                 'title_1': 'ДОБАВИТЬ',
+                                                 'title_2': 'НОВЫЙ',
+                                                 'title_3': 'ТОВАР'})
