@@ -884,6 +884,14 @@ urlpatterns = [
 
 ***
 ***
+
+## Дополнительные материалы:
+1. [Документация по шаблонам в django (документация на русском)](https://djangodoc.ru/3.2/topics/templates/)
+2. [Видео по работе с шаблонами](https://www.youtube.com/watch?v=BnarjXCfSMY)
+3. [Документация по шаблонам в django (документация на английском)](https://docs.djangoproject.com/en/5.0/ref/templates/)
+4. [Паттерны MVC vs MVP vs MVVM](https://habr.com/ru/articles/215605/)
+5. [Паттерн MVT](https://d-mess.readthedocs.io/en/latest/developers/patterns.html)
+
 ## [К оглавлению](README.md)
 ## [К предыдущей главе 'Работа с моделями'](2_Working_with_models.md)
 ## [К следующей главе 'Работа с формами'](4_Working_with_forms.md)
