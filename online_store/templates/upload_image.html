@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block title_1 %}{{ title_1 }}{% endblock %}
+
+{% block title_2 %}{{ title_2 }}{% endblock %}
+
+{% block title_3 %}{{ title_3 }}{% endblock %}
+
+{% block content %}
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Загрузить</button>
+</form>
+
+{% endblock %}
