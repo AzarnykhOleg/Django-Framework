@@ -1,10 +1,11 @@
 from datetime import timedelta
 
 from django.core.files.storage import FileSystemStorage
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 import logging
 
+from django.urls import reverse
 from django.utils import timezone
 
 from .forms import UploadImmage
@@ -76,7 +77,8 @@ def upload_immage(request):
     if request.method == 'POST':
         form = UploadImmage(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            image = form.save()
+            return HttpResponseRedirect(reverse('image_detail', args=[image.id]))
     else:
         form = UploadImmage()
     return render(request, 'upload_image.html', {'form': form,
@@ -84,3 +86,12 @@ def upload_immage(request):
                                                  'title_1': 'ДОБАВИТЬ',
                                                  'title_2': 'НОВЫЙ',
                                                  'title_3': 'ТОВАР'})
+
+
+def image_detail(request, pk):
+    image = get_object_or_404(Product, pk=pk)
+    return render(request, 'image_detail.html', {'image': image,
+                                                  'title': 'Просмотр изображения',
+                                                  'title_1': 'ОЦЕНИТЬ',
+                                                  'title_2': 'КРАСОТУ',
+                                                  'title_3': 'ТОВАРА'})
