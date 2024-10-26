@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from myapp3.views import index
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -27,4 +29,5 @@ urlpatterns = [
     path('les4/', include('myapp4.urls')),
     path('', index),
     path('les6/', include('myapp6.urls')),
-]
+    path('', include('marketplace.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
