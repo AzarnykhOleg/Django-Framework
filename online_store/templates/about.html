@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block title_1 %}{{ title_1 }}{% endblock %}
+
+{% block title_2 %}{{ title_2 }}{% endblock %}
+
+{% block title_3 %}{{ title_3 }}{% endblock %}
+
+{% block content %}
+
+    <h1 class="heading_1">Обо мне</h1>
+
+    <h2 class="heading_2">Я - студент GeekBrains</h2>
+    <p class="paragraph_all">И это мои первые шаги в изучении фреймворка Django.<br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cupiditate deserunt et fugiat incidunt, itaque
+        minima numquam obcaecati omnis perferendis perspiciatis praesentium quia quo rem sed sunt veniam.
+        Aliquid animi asperiores aut dicta dolorum magni maiores necessitatibus nemo nobis nulla.<br>
+        Accusantium aliquam aperiam atque autem consequuntur cum, esse est facere hic ipsam ipsum nam, nesciunt quae
+        qui quis repellat repudiandae rerum similique soluta unde, velit voluptate voluptatem. Asperiores aspernatur
+        consectetur deserunt dignissimos error facere, in laboriosam placeat, provident sunt, ut voluptatem voluptates?
+        Accusantium animi consequuntur cumque distinctio eius error explicabo, facilis ipsum libero maiores nemo nihil
+        nulla numquam odio pariatur quis recusandae reiciendis rem repudiandae sint sunt temporibus veritatis.<br>
+        Amet dignissimos ea magnam officia saepe voluptate, voluptatum. Atque commodi consequuntur dolore ipsam ipsum
+        labore nam nulla, omnis quibusdam totam unde vel vitae. Culpa magni pariatur porro quaerat quam sed sint velit.
+        Deserunt dolorem ducimus iste labore praesentium qui quo totam? Assumenda deserunt dicta earum excepturi nisi
+        quasi rerum soluta? A adipisci aliquam dolorum eligendi excepturi facilis nihil!</p>
+    <a href="https://vk.com"><img width="30" height="30" src="{% static 'img/VK.com-logo.svg' %}" alt="VK" title="Вконтакте">ВКонтакте</a>
+    <a href="https://ok.ru"><img width="30" height="30" src="{% static 'img/odnoclass.png' %}" alt="ok" title="Одноклассники">Одноклассники</a>
+{% endblock %}
