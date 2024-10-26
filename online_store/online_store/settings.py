@@ -28,8 +28,14 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = [
+    '192.168.56.1',
+    '192.168.1.47',
     '127.0.0.1',
     'olazar61.pythonanywhere.com',
+]
+
+INTERNAL_IPS = [
+    '127.0.0.1',
 ]
 
 SESSION_COOKIE_SECURE = True
