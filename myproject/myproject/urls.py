@@ -21,8 +21,10 @@ from myapp3.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('__debug__/', include("debug_toolbar.urls")),
     path('les1/', include('myapp.urls')),
     path('les3/', include('myapp3.urls')),
     path('les4/', include('myapp4.urls')),
     path('', index),
+    path('les6/', include('myapp6.urls')),
 ]
